@@ -1,0 +1,14 @@
+<div *ngIf="isLoading">
+    Loading&hellip;
+</div>
+
+<div class="image__list">
+    <figure *ngFor="let image of images; let i=index">
+        <template [ngIf]="i<12">
+            <a [routerLink]="['/images', image.id]">
+                <img src="{{ image?.thumbnailUrl }}" class="">
+                <figcaption>{{ image?.title }}</figcaption>
+            </a>
+        </template>
+    </figure>
+</div>

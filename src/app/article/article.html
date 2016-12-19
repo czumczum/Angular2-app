@@ -1,0 +1,19 @@
+<div *ngIf="isLoading">
+    Loading&hellip;
+</div>
+
+<div *ngIf="error">
+    Something went wrong!
+</div>
+
+<article *ngIf="article" class="article">
+    <header>
+        <h2>{{ article?.title }}</h2>
+    </header>
+    <section class="article__content">
+        {{ article?.body }}
+    </section>
+    <footer>
+        <a [routerLink]="['/articles']" routerLinkActive="active" class="btn btn-1 btn-1e">Return</a>
+    </footer>
+</article>

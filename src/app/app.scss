@@ -1,0 +1,122 @@
+@import "~normalize-scss/sass/normalize";
+@import "~flexboxgrid-sass";
+@import "variables";
+@import "effects";
+
+body {
+    background-color: $background-color;
+    font-family: "Futura PT", sans-serif;
+}
+
+.app__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: $heading-color;
+  font-weight: normal;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin: 15px 20px;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 1.35em;
+}
+
+
+.app__title{
+
+  &--border {
+    color: $heading-highlight-color;
+
+    position: relative;
+    display: inline-block;
+
+    margin: 1em auto;
+
+    &::before {
+      content: " ";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+
+      width: 100%;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin:  0% 50%;
+
+      transition: transform 1s ease, border-color 2s ease;
+      border-bottom: 1px solid $heading-highlight-color;
+    }
+
+    &::after {
+      content: " ";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+
+      width: 100%;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin:  100% 50%;
+
+      transition: transform 1s ease, border-color 2s ease;
+      border-bottom: 1px solid $heading-highlight-color;
+    }
+
+    &:hover {
+      &::before, &::after {
+        transform: scaleX(1);
+        border-bottom-color: $background-color;
+      }
+
+    }
+  }
+}
+.btn {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 1em 3em;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Button 1 */
+.btn-1 {
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+myfirts-article {
+    color: white;
+}

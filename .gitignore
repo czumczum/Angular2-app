@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+.DS_Store
+.idea/Angular2 app.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+LICENSE
+README.md
+karma.conf.js
+karma.entry.ts
+node_modules/
+tests/

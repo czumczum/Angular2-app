@@ -1,0 +1,11 @@
+<div *ngIf="isLoading">
+	Loading&hellip;
+</div>
+
+<div class="form">
+	<!--<input #name />-->
+	<textarea #text>Put your text here</textarea>
+	<button (click)="add(text.value); text.value=''">
+		Add
+	</button>
+</div>

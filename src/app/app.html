@@ -1,0 +1,28 @@
+<div class="container container-fluid">
+    <div class="row around-xs center-xs">
+        <div class="col-xs">
+            <h1 class="app__title--border">Example Angular 2 application</h1>
+        </div>
+    </div>
+
+    <nav class="row around-xs center-xs">
+        <div class="col-xs app__nav cl-effect-5">
+            <a [routerLink]="['/articles']" routerLinkActive="active">
+                <span data-hover="Articles">Articles</span>
+            </a>
+            <a [routerLink]="['/images']" routerLinkActive="active">
+                <span data-hover="Images">Images</span>
+            </a>
+            <a [routerLink]="['/contact']" routerLinkActive="active">
+                <span data-hover="Contact">Contact</span>
+            </a>
+            <a [routerLink]="['/credits']" routerLinkActive="active">
+                <span data-hover="Page">Page four</span>
+            </a>
+        </div>
+    </nav>
+
+    <hr />
+
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,7 @@
+<div *ngIf="isLoading">
+    Loading&hellip;
+</div>
+
+<article *ngFor="let article of articles">
+    <h4 class="cl-effect-21"><a [routerLink]="['/articles', article.id]">{{ article.title }}</a></h4>
+</article>

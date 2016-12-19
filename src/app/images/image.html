@@ -1,0 +1,17 @@
+<div *ngIf="isLoading">
+    Loading&hellip;
+</div>
+
+<div *ngIf="error">
+    Something went wrong!
+</div>
+
+<figure *ngIf="image" class="image">
+    <img src="{{ image?.url }}">
+    <figcaption class="image__caption">
+        <p>{{ image?.title }}</p>
+    </figcaption>
+    <footer>
+        <a [routerLink]="['/images']" routerLinkActive="active" class="btn btn-1 btn-1e">Return</a>
+    </footer>
+</figure>
