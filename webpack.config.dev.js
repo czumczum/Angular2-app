@@ -11,7 +11,7 @@ config.devtool = 'inline-source-map';
 
 config.output = {
     path: './dist',
-    publicPath: 'http://localhost:3000/',
+    publicPath: 'http://localhost:8080/',
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
     sourceMapFilename: '[name].map'
@@ -24,7 +24,7 @@ config.devServer = {
     stats: 'minimal',
     outputPath: 'dist',
     host: 'localhost',
-    port: 3000,
+    port: 8080,
     watchOptions: {
         aggregateTimeout: 300,
         poll: 1000

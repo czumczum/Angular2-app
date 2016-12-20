@@ -1,0 +1,10 @@
+<div *ngIf="isLoading">
+    Loading&hellip;
+</div>
+
+<article *ngFor="let post of blogPosts">
+        <p>{{ post.id}}</p>
+    <h4 class="cl-effect-21"><a [routerLink]="['/posts', post.id]">
+        {{ post.title }} || {{ post.name }}</a></h4>
+    <h5 class="date">[{{ post.date }}]</h5>
+</article>

@@ -4,8 +4,11 @@
 
 <div class="form">
 	<!--<input #name />-->
-	<textarea #text>Put your text here</textarea>
-	<button (click)="add(text.value); text.value=''">
+	<p>We are thrilled to hear your opinion:</p>
+	<input #title placeholder="Title" class="title" />
+	<textarea #text placeholder="Put your text here"></textarea>
+	<input #name placeholder="Your name" />
+	<button class="btn btn-1 btn-1d" (click)="add(title.value, text.value, name.value, date); title.value=''; text.value=''; name.value='';">
 		Add
 	</button>
 </div>

@@ -16,7 +16,10 @@ import {Contact} from "./contact.model";
     providers: [ContactService]
 })
 export class ContactComponent implements OnInit, OnDestroy {
-    private form: Contact;
+    private text: Contact;
+    private name: Contact;
+    private title: Contact;
+    private date: any = new Date().toLocaleString();
     constructor(
         private route: ActivatedRoute,
         private contactService: ContactService
@@ -30,12 +33,16 @@ export class ContactComponent implements OnInit, OnDestroy {
 
     ngOnDestroy(): void {}
 
-    add(text: string): void {
-        text = text.trim();
-        if (!text) { return; }
-        this.contactService.create(text)
+    add(title: string, text: string, name: string, date: string): void {
+        title = title.trim();
+        name = name.trim();
+        if (!title || !text || !name) { return; }
+        this.contactService.create(title, text, name, date)
             .then(body => {
-                this.form.push(body);
+                this.title.push(body);
+                this.text.push(body);
+                this.name.push(body);
+                this.date.push(body);
             });
     }
 }

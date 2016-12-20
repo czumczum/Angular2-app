@@ -9,6 +9,10 @@ import { ImageListComponent } from './images/image-list.component';
 
 import { ContactComponent } from './contact/contact.component';
 
+import { PostComponent } from './blog/post.component';
+import { BlogComponent } from './blog/blog-list.component';
+
+
 
 const appRoutes: Routes = [
     { path: 'articles/:id', component: ArticleComponent },
@@ -18,6 +22,9 @@ const appRoutes: Routes = [
     { path: 'images', component: ImageListComponent },
 
     { path: 'contact', component: ContactComponent },
+
+    { path: 'posts/:id', component: PostComponent },
+    { path: 'blog', component: BlogComponent }
 
 ];
 

@@ -32,7 +32,8 @@
     "docs": "npm run docs:typedoc && npm run docs:kss",
     "docs:typedoc": "typedoc --options ./typedoc.json ./src/app",
     "docs:kss": "kss --source ./src --destination ./docs/styleguide",
-    "start": "webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base ./dist"
+    "start": "webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base ./dist",
+    "fake-backend": "json-server --watch db.json"
   },
   "devDependencies": {
     "@angular/common": "2.1.2",

@@ -11,6 +11,8 @@ import { ArticleListComponent } from './article/article-list.component';
 import { ImageComponent } from './images/image.component';
 import { ImageListComponent } from './images/image-list.component';
 import { ContactComponent } from './contact/contact.component';
+import {BlogComponent} from "./blog/blog-list.component";
+import {PostComponent} from "./blog/post.component";
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { ContactComponent } from './contact/contact.component';
         ArticleComponent,
         ImageListComponent,
         ImageComponent,
-        ContactComponent
+        ContactComponent,
+        BlogComponent,
+        PostComponent
     ],
     providers: [appRoutingProviders],
     bootstrap: [AppComponent]
