@@ -1,0 +1,85 @@
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 50%;
+    border: 2px dotted #87D6DA;
+    background: darkcyan;
+    min-height: 10em;
+    height: fit-content;
+    z-index: 0;
+    position: relative;
+
+    &__title {
+        color: white;
+        font-size: 1.3em;
+        margin-bottom: 0.1rem;
+    }
+
+    &__body {
+        width: 90%;
+        font-size: 1.2em;
+        padding: 0.1rem 0.5rem;
+        margin-bottom: 1em;
+    }
+}
+
+input {
+    width: 10em;
+    font-size: 1.2em;
+    padding: 0.1rem 0.5rem;
+
+    &.title {
+        width: 31em;
+    }
+}
+
+input {
+    transition: 0.1s ease outline-offset;
+    outline-offset: -1px;
+    outline: 1px solid whitesmoke;
+
+
+    &:focus {
+        outline: 1px solid whitesmoke;
+        outline-offset: 5px;
+    }
+}
+
+/* Button 1d */
+.btn-1d {
+    overflow: hidden;
+}
+
+.btn-1d:after {
+    width: 0;
+    height: 103%;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    z-index: -1;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.btn-1d:hover,
+.btn-1d:active {
+    color: #0e83cd;
+}
+
+.btn-1d:hover:after {
+    width: 90%;
+    opacity: 1;
+}
+
+.btn-1d:active:after {
+    width: 101%;
+    opacity: 1;
+}

@@ -13,6 +13,7 @@ import { ImageListComponent } from './images/image-list.component';
 import { ContactComponent } from './contact/contact.component';
 import {BlogComponent} from "./blog/blog-list.component";
 import {PostComponent} from "./blog/post.component";
+import {CommentsComponent} from "./comments/comments.component";
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {PostComponent} from "./blog/post.component";
         ImageComponent,
         ContactComponent,
         BlogComponent,
-        PostComponent
+        PostComponent,
+        CommentsComponent
     ],
     providers: [appRoutingProviders],
     bootstrap: [AppComponent]

@@ -38,11 +38,5 @@ export class ContactComponent implements OnInit, OnDestroy {
         name = name.trim();
         if (!title || !text || !name) { return; }
         this.contactService.create(title, text, name, date)
-            .then(body => {
-                this.title.push(body);
-                this.text.push(body);
-                this.name.push(body);
-                this.date.push(body);
-            });
     }
 }

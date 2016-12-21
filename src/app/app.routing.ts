@@ -12,6 +12,8 @@ import { ContactComponent } from './contact/contact.component';
 import { PostComponent } from './blog/post.component';
 import { BlogComponent } from './blog/blog-list.component';
 
+import { CommentsComponent } from './comments/comments.component';
+
 
 
 const appRoutes: Routes = [

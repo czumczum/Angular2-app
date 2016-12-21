@@ -1,10 +1,16 @@
 <div *ngIf="isLoading">
     Loading&hellip;
 </div>
-
-<article *ngFor="let post of blogPosts">
+<section>
+    <h1>Pick one</h1>
+    <article *ngFor="let post of blogPosts">
+        <div>
         <p>{{ post.id}}</p>
-    <h4 class="cl-effect-21"><a [routerLink]="['/posts', post.id]">
-        {{ post.title }} || {{ post.name }}</a></h4>
-    <h5 class="date">[{{ post.date }}]</h5>
-</article>
+    <h2 class="cl-effect-21"><a [routerLink]="['/posts', post.id]">
+        {{ post.title }}</a></h2>
+            </div>
+        <div class="border">
+    <h5 class="date">[{{ post.date }}]</h5>, <h4>{{ post.name }}</h4>
+            </div>
+    </article>
+</section>

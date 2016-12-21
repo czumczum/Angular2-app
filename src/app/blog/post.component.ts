@@ -1,8 +1,12 @@
-import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
+import {Component, ViewEncapsulation, OnInit, OnDestroy, Output} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { BlogService } from './blog.service';
 import { Blog } from './blog.model';
+
+import { CommentsService } from '../comments/comments.service';
+import { Comments } from '../comments/comments.model';
+
 import { Response } from '@angular/http';
 
 /**
@@ -13,16 +17,20 @@ import { Response } from '@angular/http';
     templateUrl: './post.html',
     styleUrls: ['./post.scss'],
     encapsulation: ViewEncapsulation.Emulated,
-    providers: [BlogService]
+    providers: [BlogService, CommentsService],
+    outputs: ['blogId'],
 })
+
 export class PostComponent implements OnInit, OnDestroy {
     private blog: Blog;
+    private comments: Comments[];
     private error: Response;
     private isLoading: boolean = true;
 
     constructor(
         private route: ActivatedRoute,
-        private articleService: BlogService
+        private blogService: BlogService,
+        private commentsService: CommentsService
     ) {
 
     }
@@ -32,8 +40,14 @@ export class PostComponent implements OnInit, OnDestroy {
      */
     ngOnInit(): void {
         let id = +this.route.snapshot.params['id'];
-        this.articleService.get(id).subscribe(
+        // let comments = this.comments;
+        this.blogService.get(id).subscribe(
             (data)  => this.blog = data,
+            (error) => this.error = error,
+            ()      => this.isLoading = false
+        );
+        this.commentsService.getAll().subscribe(
+            (data)  => this.comments = data,
             (error) => this.error = error,
             ()      => this.isLoading = false
         );
