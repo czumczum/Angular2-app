@@ -51,6 +51,97 @@
     }
   ],
   "comments": [
+    {
+      "body": "First comment for first blog post",
+      "name": "winner",
+      "date": "22/12/2016, 10:09:56",
+      "postId": 1,
+      "id": 1
+    },
+    {
+      "body": "Non aliqua est, pork tempor ham qui voluptate tenderloin prosciutto sunt pork chop. Sed tenderloin et prosciutto esse chicken chuck. Drumstick corned beef exercitation adipisicing biltong. Sed ex irure, landjaeger filet mignon exercitation venison veniam et short ribs nulla shoulder.",
+      "name": "Pancetta",
+      "date": "22/12/2016, 10:16:33",
+      "postId": 2,
+      "id": 2
+    },
+    {
+      "body": "function loaded() {   // woo yey image loaded }",
+      "name": "Me",
+      "date": "22/12/2016, 10:20:30",
+      "postId": 3,
+      "id": 3
+    },
+    {
+      "body": "Border above the comments is from non-displayed ones.",
+      "name": "Angular2",
+      "date": "22/12/2016, 10:22:17",
+      "postId": 5,
+      "id": 4
+    },
+    {
+      "body": "Pork id chuck occaecat, shank pancetta in in.",
+      "name": "Capicola",
+      "date": "22/12/2016, 10:51:28",
+      "postId": 2,
+      "id": 5
+    },
+    {
+      "body": "Next try",
+      "name": "Esse",
+      "date": "22/12/2016, 10:52:49",
+      "postId": 2,
+      "id": 6
+    },
+    {
+      "body": "Next opinion",
+      "name": "Me",
+      "date": "22/12/2016, 11:03:37",
+      "postId": 2,
+      "id": 7
+    },
+    {
+      "body": "dsfsdgssdfs",
+      "name": "fsdf",
+      "date": "22/12/2016, 11:04:36",
+      "postId": 2,
+      "id": 8
+    },
+    {
+      "body": "My next one",
+      "name": "Ang",
+      "date": "22/12/2016, 11:12:39",
+      "postId": 5,
+      "id": 9
+    },
+    {
+      "body": "Reloading....",
+      "name": "In Progress",
+      "date": "22/12/2016, 11:22:15",
+      "postId": 1,
+      "id": 10
+    },
+    {
+      "body": "No, it's not!",
+      "name": "Angular fan",
+      "date": "22/12/2016, 11:30:10",
+      "postId": 4,
+      "id": 11
+    },
+    {
+      "body": "New function",
+      "name": "Superb",
+      "date": "22/12/2016, 11:45:31",
+      "postId": 3,
+      "id": 12
+    },
+    {
+      "body": "dgdg",
+      "name": "fdgdfg",
+      "date": "22/12/2016, 12:44:01",
+      "postId": 6,
+      "id": 13
+    }
   ],
   "profile": {
     "name": "typicode"

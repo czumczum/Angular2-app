@@ -4,8 +4,6 @@
 .idea/misc.xml
 .idea/modules.xml
 .idea/workspace.xml
-LICENSE
-README.md
 karma.conf.js
 karma.entry.ts
 node_modules/

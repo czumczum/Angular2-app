@@ -17,21 +17,6 @@
     <footer>
         <a [routerLink]="['/blog']" routerLinkActive="active" class="btn btn-1 btn-1e">Return</a>
     </footer>
-</article>
 
-<section *ngIf="comments" class="comment">
-    <h2>Comments:</h2>
-    <main>
-        <div *ngFor="let comment of comments">
-            <div *ngIf="comment.postId == blog.id">
-                <p>{{ comment.body }}</p>
-                <p>
-                    <span>{{ comment.name }}</span>
-                    <span>{{ comment.date }}</span>
-                </p>
-            </div>
-        </div>
-        </main>
-
-<my-comment [blogId]="blog.id"></my-comment>
-    </section>
+    <my-comment [blogId]="blog.id"></my-comment>
+    </article>

@@ -7,7 +7,24 @@
 	<p ngClass="form__title">We are thrilled to hear your opinion:</p>
 	<input #body ngClass="form__body" placeholder="Put your text here" />
 	<input #name placeholder="Your name" />
-	<button class="btn btn-1 btn-1d" (click)="add(body.value, name.value, date, blogId); body.value=''; name.value='';">
+	<a [routerLink]="['/posts/' + blogId]" class="btn btn-1 btn-1d"
+       (click)="add(body.value, name.value, date, blogId); body.value=''; name.value=''; renavigate()
+;">
 		Add
-	</button>
+	</a>
 </div>
+
+<section *ngIf="comments" class="comment">
+    <h2>Comments:</h2>
+    <main>
+        <div *ngFor="let comment of comments">
+            <div *ngIf="comment.postId == blogId" class="comment__item">
+                <p>{{ comment.body }}</p>
+                <p>
+                    <span class="comment__author">{{ comment.name }}</span>
+                    <span>{{ comment.date }}</span>
+                </p>
+            </div>
+        </div>
+    </main>
+</section>

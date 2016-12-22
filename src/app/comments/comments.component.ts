@@ -1,10 +1,11 @@
-import {Component, ViewEncapsulation, OnInit, OnDestroy, NgModule, Input, Output} from '@angular/core';
+import {Component, ViewEncapsulation, OnInit, OnDestroy, NgModule, Input} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import 'rxjs/add/operator/toPromise';
+import { Response } from '@angular/http';
+
 import {CommentsService} from "./comments.service";
 import {Comments} from "./comments.model";
-import {PostComponent} from '../blog/post.component';
 import { BlogService } from '../blog/blog.service';
 
 /**
@@ -14,12 +15,8 @@ import { BlogService } from '../blog/blog.service';
     selector: 'my-comment',
     templateUrl: './comments.html',
     styleUrls: ['./comments.scss'],
-    encapsulation: ViewEncapsulation.Emulated,
+    encapsulation: ViewEncapsulation.Native,
     providers: [CommentsService],
-})
-
-@NgModule({
-    declarations: [PostComponent]
 })
 
 export class CommentsComponent implements OnInit, OnDestroy {
@@ -27,9 +24,14 @@ export class CommentsComponent implements OnInit, OnDestroy {
     private postId: Comments;
     private body: Comments;
     private name: Comments;
+    private comments: Comments[];
+    private error: Response;
+    private isLoading: boolean = true;
     private date: any = new Date().toLocaleString();
-    private postComponent: any = PostComponent;
     private blog: any = BlogService;
+    private router;
+    private routeParams;
+    private zone;
 
     constructor(
         private route: ActivatedRoute,
@@ -38,8 +40,22 @@ export class CommentsComponent implements OnInit, OnDestroy {
 
     }
 
+    renavigate(): void {
+        // this.router.navigate('RouteName', this.routeParams.params);
+        // this.zone.run();
+    }
+
+    reload():void {
+        this.commentsService.getAll().subscribe(
+            (data)  => this.comments = data,
+            (error) => this.error = error,
+            ()      => this.isLoading = false
+        );
+    }
+
     ngOnInit(): void {
         let id = +this.route.snapshot.params['id'];
+        this.reload();
     }
 
     ngOnDestroy(): void {}
@@ -48,9 +64,10 @@ export class CommentsComponent implements OnInit, OnDestroy {
         body = body.trim();
         name = name.trim();
         if (!body || !postId || !name) { return; }
-        this.commentsService.create(body, name, date, postId);
-
-            // //Reload the comments on post page
-            // .then(this.postComponent.ngOnInit())
+        this.commentsService.create(body, name, date, postId)
+            .then(comment => {
+                this.comments.push(comment);
+            });
     }
+
 }
