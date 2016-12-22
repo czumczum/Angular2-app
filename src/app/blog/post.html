@@ -25,10 +25,13 @@
         <div *ngFor="let comment of comments">
             <div *ngIf="comment.postId == blog.id">
                 <p>{{ comment.body }}</p>
-                <p>{{ comment.postId }}</p>
+                <p>
+                    <span>{{ comment.name }}</span>
+                    <span>{{ comment.date }}</span>
+                </p>
             </div>
         </div>
         </main>
-</section>
 
-<my-comment (blogId)="blog.id"></my-comment>
+<my-comment [blogId]="blog.id"></my-comment>
+    </section>

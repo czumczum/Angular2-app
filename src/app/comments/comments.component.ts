@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation, OnInit, OnDestroy, NgModule, Input} from '@angular/core';
+import {Component, ViewEncapsulation, OnInit, OnDestroy, NgModule, Input, Output} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import 'rxjs/add/operator/toPromise';
@@ -14,8 +14,8 @@ import { BlogService } from '../blog/blog.service';
     selector: 'my-comment',
     templateUrl: './comments.html',
     styleUrls: ['./comments.scss'],
-    encapsulation: ViewEncapsulation.None,
-    providers: [CommentsService]
+    encapsulation: ViewEncapsulation.Emulated,
+    providers: [CommentsService],
 })
 
 @NgModule({
@@ -23,6 +23,7 @@ import { BlogService } from '../blog/blog.service';
 })
 
 export class CommentsComponent implements OnInit, OnDestroy {
+    @Input() blogId:number;
     private postId: Comments;
     private body: Comments;
     private name: Comments;

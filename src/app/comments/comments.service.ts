@@ -13,7 +13,6 @@ export class CommentsService {
     constructor(private http: Http) {}
         private headers = new Headers({'Content-Type': 'application/json'});
 
-// TODO: add a postId
     create(body: string, author: string, date: string, post: any): Promise<Comments> {
         return this.http
             .post(API_ENDPOINT, JSON.stringify({body: body, name: author, date: date, postId: post}), {headers: this.headers})

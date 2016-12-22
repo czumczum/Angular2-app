@@ -51,35 +51,6 @@
     }
   ],
   "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    },
-    {
-      "id": 2,
-      "body": "some other comment",
-      "postId": 2
-    },
-    {
-      "body": "Test",
-      "name": "P",
-      "date": "21/12/2016, 10:52:44",
-      "id": 3
-    },
-    {
-      "body": "Test",
-      "name": "K",
-      "date": "21/12/2016, 10:53:22",
-      "id": 4
-    },
-    {
-      "body": "Try this",
-      "name": "Q",
-      "date": "21/12/2016, 11:51:51",
-      "postId": 2,
-      "id": 5
-    }
   ],
   "profile": {
     "name": "typicode"

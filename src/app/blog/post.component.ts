@@ -18,7 +18,6 @@ import { Response } from '@angular/http';
     styleUrls: ['./post.scss'],
     encapsulation: ViewEncapsulation.Emulated,
     providers: [BlogService, CommentsService],
-    outputs: ['blogId'],
 })
 
 export class PostComponent implements OnInit, OnDestroy {
@@ -32,7 +31,6 @@ export class PostComponent implements OnInit, OnDestroy {
         private blogService: BlogService,
         private commentsService: CommentsService
     ) {
-
     }
 
     /**
